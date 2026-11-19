@@ -33,7 +33,7 @@ function M.get(palette, options)
 		-- Draw no cursor line or column, since Neovim's defaults would show one
 		{ 'CursorLine', { bg = 'NONE' } },
 		{ 'CursorColumn', { bg = 'NONE' } },
-		{ 'ColorColumn', { bg = palette.background_cursorline } },
+		{ 'ColorColumn', { bg = palette.background_subtle } },
 
 		-- Gutter
 		{ 'LineNr', { fg = palette.foreground_muted } },
@@ -42,7 +42,7 @@ function M.get(palette, options)
 		{ 'FoldColumn', { fg = palette.foreground_muted, bg = background } },
 		{
 			'Folded',
-			{ fg = palette.foreground_muted, bg = palette.background_cursorline },
+			{ fg = palette.foreground_muted, bg = palette.background_subtle },
 		},
 
 		-- Selection and search
@@ -135,9 +135,9 @@ function M.get(palette, options)
 		{ 'SpellRare', { undercurl = true, sp = palette.mauve } },
 
 		-- Diff
-		{ 'DiffAdd', { fg = palette.jade, bg = palette.background_cursorline } },
-		{ 'DiffChange', { fg = palette.aqua, bg = palette.background_cursorline } },
-		{ 'DiffDelete', { fg = palette.rose, bg = palette.background_cursorline } },
+		{ 'DiffAdd', { fg = palette.jade, bg = palette.background_subtle } },
+		{ 'DiffChange', { fg = palette.aqua, bg = palette.background_subtle } },
+		{ 'DiffDelete', { fg = palette.rose, bg = palette.background_subtle } },
 		{ 'DiffText', { fg = palette.peach, bg = palette.background_selection } },
 	}
 end

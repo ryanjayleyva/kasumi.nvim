@@ -18,13 +18,13 @@ local lavender = '#cac1c7'
 local sage_light = '#b5c4b8'
 local silver = '#d3cdca'
 
--- Match the terminal background
-local ink = '#111015'
+-- Set the editor background
+local ink = '#181818'
 
 -- Derive from the background
-local ink_darker = '#0d0c11'
-local ink_popup = '#17161c'
-local ink_selection = '#2a2931'
+local ink_darker = '#121212'
+local ink_popup = '#1d1d1d'
+local ink_selection = '#2c2c2c'
 
 -- Derive from the foreground, a quarter of the way from grey to silver
 local ash = '#969995'
@@ -32,7 +32,7 @@ local ash = '#969995'
 M.background = ink
 M.background_panel = ink_darker -- statusline and sidebars
 M.background_popup = ink_popup -- floating windows and menus
-M.background_cursorline = charcoal
+M.background_subtle = charcoal
 M.background_selection = ink_selection
 
 M.foreground = silver

@@ -39,11 +39,11 @@ These also set the `:terminal` colors inside Neovim.
 
 | Role             | Hex       | Base color |
 | ---------------- | --------- | ---------- |
-| background       | `#111015` | new        |
-| background_panel | `#0d0c11` | new        |
-| background_popup | `#17161c` | new        |
-| cursorline       | `#1e1d24` | charcoal   |
-| selection        | `#2a2931` | new        |
+| background       | `#181818` | new        |
+| background_panel | `#121212` | new        |
+| background_popup | `#1d1d1d` | new        |
+| subtle           | `#1e1d24` | charcoal   |
+| selection        | `#2c2c2c` | new        |
 | foreground       | `#d3cdca` | silver     |
 | foreground_soft  | `#969995` | new        |
 | foreground_muted | `#818783` | grey       |
