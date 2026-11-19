@@ -7,6 +7,7 @@ local plugin_modules = {
 	'telescope',
 	'treesitter-context',
 	'dap',
+	'neotest',
 }
 
 function M.get(palette, options)
