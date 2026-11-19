@@ -36,7 +36,7 @@ end
 
 function M.setup(user_options)
 	M.options = vim.tbl_deep_extend('force', M.options, user_options or {})
-	-- Reload so new options apply without another :colorscheme.
+	-- Reload so new options apply without another :colorscheme
 	if vim.g.colors_name == 'kasumi' then
 		M.load()
 	end

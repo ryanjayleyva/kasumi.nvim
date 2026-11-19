@@ -1,5 +1,5 @@
--- Define editor UI groups (Normal, CursorLine, StatusLine, ...).
--- Return a list of { group_name, definition } pairs, like the other modules.
+-- Define editor UI groups (Normal, CursorLine, StatusLine, ...)
+-- Return a list of { group_name, definition } pairs, like the other modules
 local M = {}
 
 function M.get(palette, options)
@@ -10,9 +10,15 @@ function M.get(palette, options)
 		-- Base
 		{ 'Normal', { fg = palette.foreground, bg = background } },
 		{ 'NormalNC', { link = 'Normal' } },
-		{ 'NormalFloat', { fg = palette.foreground, bg = palette.background_popup } },
+		{
+			'NormalFloat',
+			{ fg = palette.foreground, bg = palette.background_popup },
+		},
 		{ 'FloatBorder', { fg = palette.border, bg = palette.background_popup } },
-		{ 'FloatTitle', { fg = palette.rose, bg = palette.background_popup, bold = true } },
+		{
+			'FloatTitle',
+			{ fg = palette.rose, bg = palette.background_popup, bold = true },
+		},
 		{ 'MsgArea', { fg = palette.foreground } },
 		{ 'EndOfBuffer', { fg = background } },
 
@@ -30,7 +36,10 @@ function M.get(palette, options)
 		{ 'CursorLineNr', { fg = palette.rose, bold = true } },
 		{ 'SignColumn', { fg = palette.foreground_muted, bg = background } },
 		{ 'FoldColumn', { fg = palette.foreground_muted, bg = background } },
-		{ 'Folded', { fg = palette.foreground_muted, bg = palette.background_cursorline } },
+		{
+			'Folded',
+			{ fg = palette.foreground_muted, bg = palette.background_cursorline },
+		},
 
 		-- Selection and search
 		{ 'Visual', { bg = palette.background_selection } },
@@ -39,22 +48,37 @@ function M.get(palette, options)
 		{ 'IncSearch', { fg = palette.background, bg = palette.rose } },
 		{ 'CurSearch', { link = 'IncSearch' } },
 		{ 'Substitute', { fg = palette.background, bg = palette.blush } },
-		{ 'MatchParen', { fg = palette.rose, bg = palette.background_selection, bold = true } },
+		{
+			'MatchParen',
+			{ fg = palette.rose, bg = palette.background_selection, bold = true },
+		},
 
 		-- Windows and splits
 		{ 'WinSeparator', { fg = palette.border } },
 		{ 'VertSplit', { link = 'WinSeparator' } },
-		{ 'StatusLine', { fg = palette.foreground, bg = palette.background_panel } },
-		{ 'StatusLineNC', { fg = palette.foreground_muted, bg = palette.background_panel } },
+		{
+			'StatusLine',
+			{ fg = palette.foreground, bg = palette.background_panel },
+		},
+		{
+			'StatusLineNC',
+			{ fg = palette.foreground_muted, bg = palette.background_panel },
+		},
 		{ 'WinBar', { fg = palette.foreground, bg = background } },
 		{ 'WinBarNC', { fg = palette.foreground_muted, bg = background } },
-		{ 'TabLine', { fg = palette.foreground_muted, bg = palette.background_panel } },
+		{
+			'TabLine',
+			{ fg = palette.foreground_muted, bg = palette.background_panel },
+		},
 		{ 'TabLineFill', { bg = palette.background_panel } },
 		{ 'TabLineSel', { fg = palette.rose, bg = background, bold = true } },
 
 		-- Completion and wildmenu
 		{ 'Pmenu', { fg = palette.foreground, bg = palette.background_popup } },
-		{ 'PmenuSel', { fg = palette.foreground, bg = palette.background_selection } },
+		{
+			'PmenuSel',
+			{ fg = palette.foreground, bg = palette.background_selection },
+		},
 		{ 'PmenuSbar', { bg = palette.background_popup } },
 		{ 'PmenuThumb', { bg = palette.border } },
 		{ 'WildMenu', { link = 'PmenuSel' } },

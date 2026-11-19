@@ -1,11 +1,11 @@
--- Define syntax and Treesitter groups.
--- Return a list of { group_name, definition } pairs, like the other modules.
+-- Define syntax and Treesitter groups
+-- Return a list of { group_name, definition } pairs, like the other modules
 local M = {}
 
 function M.get(palette, _options)
 	return {
 		-- Classic Vim syntax groups. Treesitter captures link to these by
-		-- default, so most code gets its color from this section.
+		-- default, so most code gets its color from this section
 		{ 'Comment', { fg = palette.foreground_muted, italic = true } },
 		{ 'SpecialComment', { fg = palette.lavender, italic = true } },
 		{ 'Todo', { fg = palette.background, bg = palette.peach, bold = true } },
@@ -54,7 +54,7 @@ function M.get(palette, _options)
 		{ 'Removed', { fg = palette.rose } },
 
 		-- Treesitter captures that need a different color than their default
-		-- Vim group.
+		-- Vim group
 		{ '@variable', { fg = palette.foreground } },
 		{ '@variable.parameter', { fg = palette.lavender } },
 		{ '@variable.builtin', { fg = palette.rose } },
@@ -77,10 +77,19 @@ function M.get(palette, _options)
 		{ '@punctuation.bracket', { fg = palette.foreground_muted } },
 		{ '@punctuation.special', { fg = palette.blush } },
 
-		{ '@comment.error', { fg = palette.background, bg = palette.rose, bold = true } },
-		{ '@comment.warning', { fg = palette.background, bg = palette.peach, bold = true } },
+		{
+			'@comment.error',
+			{ fg = palette.background, bg = palette.rose, bold = true },
+		},
+		{
+			'@comment.warning',
+			{ fg = palette.background, bg = palette.peach, bold = true },
+		},
 		{ '@comment.todo', { link = 'Todo' } },
-		{ '@comment.note', { fg = palette.background, bg = palette.aqua, bold = true } },
+		{
+			'@comment.note',
+			{ fg = palette.background, bg = palette.aqua, bold = true },
+		},
 
 		-- Markup (Markdown, help files, ...)
 		{ '@markup.heading', { fg = palette.rose, bold = true } },

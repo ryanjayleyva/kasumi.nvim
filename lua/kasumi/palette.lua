@@ -1,6 +1,6 @@
 local M = {}
 
--- The 16 terminal colors, in order.
+-- The 16 terminal colors, in order
 local black = '#040406'
 local rose = '#dbaeaf'
 local sage = '#babca7'
@@ -18,10 +18,10 @@ local lavender = '#cac1c7'
 local sage_light = '#b5c4b8'
 local silver = '#d3cdca'
 
--- Match the terminal background.
+-- Match the terminal background
 local ink = '#111015'
 
--- Derive from the background.
+-- Derive from the background
 local ink_darker = '#0d0c11'
 local ink_popup = '#17161c'
 local ink_selection = '#2a2931'
@@ -47,7 +47,7 @@ M.peach = peach
 M.mist = mist
 M.lavender = lavender
 
--- Lua lists start at 1, so entry n is terminal color n - 1.
+-- Lua lists start at 1, so entry n is terminal color n - 1
 M.terminal_colors = {
 	black,
 	rose,
