@@ -4,7 +4,8 @@ A Neovim colorscheme written in Lua, with a muted palette of dusty pinks,
 sages and greys on a near-black background.
 
 > **WIP:** work in progress. Editor, syntax and Treesitter groups are done.
-> Plugin groups so far cover gitsigns and nvim-cmp.
+> Plugin groups cover gitsigns, nvim-cmp, telescope, nvim-treesitter-context,
+> nvim-dap, neotest, mason and kulala.
 
 ## Palette
 
