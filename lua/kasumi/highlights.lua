@@ -1,4 +1,4 @@
--- Define editor UI groups (Normal, CursorLine, StatusLine, ...)
+-- Define editor UI groups (Normal, StatusLine, Pmenu, ...)
 -- Return a list of { group_name, definition } pairs, like the other modules
 local M = {}
 
@@ -30,8 +30,9 @@ function M.get(palette, options)
 		{ 'lCursor', { link = 'Cursor' } },
 		{ 'CursorIM', { link = 'Cursor' } },
 		{ 'TermCursor', { link = 'Cursor' } },
-		{ 'CursorLine', { bg = palette.background_cursorline } },
-		{ 'CursorColumn', { link = 'CursorLine' } },
+		-- Draw no cursor line or column, since Neovim's defaults would show one
+		{ 'CursorLine', { bg = 'NONE' } },
+		{ 'CursorColumn', { bg = 'NONE' } },
 		{ 'ColorColumn', { bg = palette.background_cursorline } },
 
 		-- Gutter
