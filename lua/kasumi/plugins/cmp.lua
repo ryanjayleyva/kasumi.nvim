@@ -42,7 +42,6 @@ function M.get(palette, _options)
 			{ fg = palette.foreground_muted, strikethrough = true },
 		},
 		{ 'CmpItemMenu', { fg = palette.foreground_muted, italic = true } },
-		{ 'CmpGhostText', { link = 'Comment' } },
 	}
 
 	for _, kind_color in ipairs(get_kind_colors(palette)) do
