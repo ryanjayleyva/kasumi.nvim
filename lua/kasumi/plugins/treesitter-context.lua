@@ -3,8 +3,14 @@ local M = {}
 
 function M.get(palette, _options)
 	return {
-		-- The border color is too close to the context background to show
-		{ 'TreesitterContextSeparator', { fg = palette.foreground_muted } },
+		-- Stay opaque, even when transparent, so scrolling code does not show through
+		{
+			'TreesitterContext',
+			{ fg = palette.foreground, bg = palette.background },
+		},
+		{ 'TreesitterContextLineNumber', { fg = palette.rose_light } },
+		-- Hide the separator line by drawing it in the background color
+		{ 'TreesitterContextSeparator', { fg = palette.background } },
 	}
 end
 

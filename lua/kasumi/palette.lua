@@ -41,6 +41,7 @@ M.foreground_muted = grey -- comments and inactive text
 M.border = charcoal
 
 M.rose = rose
+M.rose_light = rose_light
 M.sage = sage
 M.blush = blush
 M.aqua = aqua
