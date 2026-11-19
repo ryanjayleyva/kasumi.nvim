@@ -36,10 +36,22 @@ function M.get(palette, options)
 		{ 'ColorColumn', { bg = palette.background_subtle } },
 
 		-- Gutter
-		{ 'LineNr', { fg = palette.foreground_muted } },
-		{ 'CursorLineNr', { fg = palette.rose, bold = true } },
-		{ 'SignColumn', { fg = palette.foreground_muted, bg = background } },
-		{ 'FoldColumn', { fg = palette.foreground_muted, bg = background } },
+		{
+			'LineNr',
+			{ fg = palette.foreground_soft, bg = palette.background_selection },
+		},
+		{
+			'CursorLineNr',
+			{ fg = palette.rose, bg = palette.background_selection, bold = true },
+		},
+		{
+			'SignColumn',
+			{ fg = palette.foreground_muted, bg = palette.background_selection },
+		},
+		{
+			'FoldColumn',
+			{ fg = palette.foreground_muted, bg = palette.background_selection },
+		},
 		{
 			'Folded',
 			{ fg = palette.foreground_muted, bg = palette.background_subtle },
