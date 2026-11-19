@@ -1,7 +1,7 @@
 -- Collect plugin groups from lua/kasumi/plugins/
 local M = {}
 
-local plugin_modules = { 'gitsigns', 'cmp' }
+local plugin_modules = { 'gitsigns', 'cmp', 'telescope' }
 
 function M.get(palette, options)
 	local groups = {}
