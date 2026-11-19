@@ -26,6 +26,9 @@ local ink_darker = '#0d0c11'
 local ink_popup = '#17161c'
 local ink_selection = '#2a2931'
 
+-- Derive from the foreground, a quarter of the way from grey to silver
+local ash = '#969995'
+
 M.background = ink
 M.background_panel = ink_darker -- statusline and sidebars
 M.background_popup = ink_popup -- floating windows and menus
@@ -33,6 +36,7 @@ M.background_cursorline = charcoal
 M.background_selection = ink_selection
 
 M.foreground = silver
+M.foreground_soft = ash -- inlay hints and code lens
 M.foreground_muted = grey -- comments and inactive text
 M.border = charcoal
 

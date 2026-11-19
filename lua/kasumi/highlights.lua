@@ -119,6 +119,14 @@ function M.get(palette, options)
 		{ 'DiagnosticUnderlineHint', { undercurl = true, sp = palette.jade } },
 		{ 'DiagnosticUnderlineOk', { undercurl = true, sp = palette.sage } },
 
+		-- LSP text that the editor adds. These default to NonText, which is
+		-- too dark to read
+		{ 'LspInlayHint', { fg = palette.foreground_soft } },
+		{ 'LspCodeLens', { link = 'LspInlayHint' } },
+		{ 'LspCodeLensSeparator', { link = 'LspInlayHint' } },
+		-- Keep ghost text dim so it does not look like typed code
+		{ 'ComplHint', { fg = palette.foreground_muted } },
+
 		-- Spelling
 		{ 'SpellBad', { undercurl = true, sp = palette.rose } },
 		{ 'SpellCap', { undercurl = true, sp = palette.peach } },
