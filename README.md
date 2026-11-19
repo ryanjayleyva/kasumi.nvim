@@ -10,7 +10,7 @@ sages and greys on a near-black background.
 ## Palette
 
 The editor colors reuse the base colors where they can. Only the
-backgrounds are new.
+backgrounds and the soft foreground are new.
 
 ### Base colors (ANSI 0-15)
 
@@ -45,6 +45,7 @@ These also set the `:terminal` colors inside Neovim.
 | cursorline       | `#1e1d24` | charcoal   |
 | selection        | `#2a2931` | new        |
 | foreground       | `#d3cdca` | silver     |
+| foreground_soft  | `#969995` | new        |
 | foreground_muted | `#818783` | grey       |
 | border           | `#1e1d24` | charcoal   |
 
