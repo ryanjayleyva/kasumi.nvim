@@ -19,6 +19,9 @@ function M.get(palette, options)
 			'FloatTitle',
 			{ fg = palette.rose, bg = palette.background_popup, bold = true },
 		},
+		-- Keep the blend values, which set how much of the editor shows through
+		{ 'FloatShadow', { bg = palette.background_panel, blend = 80 } },
+		{ 'FloatShadowThrough', { bg = palette.background_panel, blend = 100 } },
 		{ 'MsgArea', { fg = palette.foreground } },
 		{ 'EndOfBuffer', { fg = background } },
 
@@ -95,6 +98,7 @@ function M.get(palette, options)
 		{ 'ErrorMsg', { fg = palette.rose } },
 		{ 'WarningMsg', { fg = palette.peach } },
 		{ 'MoreMsg', { fg = palette.jade } },
+		{ 'OkMsg', { fg = palette.jade } },
 		{ 'ModeMsg', { fg = palette.foreground } },
 		{ 'Question', { fg = palette.jade } },
 		{ 'QuickFixLine', { bg = palette.background_selection } },
@@ -105,6 +109,10 @@ function M.get(palette, options)
 		{ 'DiagnosticInfo', { fg = palette.aqua } },
 		{ 'DiagnosticHint', { fg = palette.jade } },
 		{ 'DiagnosticOk', { fg = palette.sage } },
+		{
+			'DiagnosticDeprecated',
+			{ sp = palette.foreground_muted, strikethrough = true },
+		},
 		{ 'DiagnosticUnderlineError', { undercurl = true, sp = palette.rose } },
 		{ 'DiagnosticUnderlineWarn', { undercurl = true, sp = palette.peach } },
 		{ 'DiagnosticUnderlineInfo', { undercurl = true, sp = palette.aqua } },
