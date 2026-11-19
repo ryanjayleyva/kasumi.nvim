@@ -10,6 +10,7 @@ local plugin_modules = {
 	'neotest',
 	'mason',
 	'kulala',
+	'dadbod',
 }
 
 function M.get(palette, options)

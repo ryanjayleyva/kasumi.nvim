@@ -5,7 +5,7 @@ sages and greys on a near-black background.
 
 > **WIP:** work in progress. Editor, syntax and Treesitter groups are done.
 > Plugin groups cover gitsigns, nvim-cmp, telescope, nvim-treesitter-context,
-> nvim-dap, neotest, mason and kulala.
+> nvim-dap, neotest, mason, kulala and vim-dadbod-ui.
 
 ## Palette
 
