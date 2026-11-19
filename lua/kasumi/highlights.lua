@@ -60,10 +60,8 @@ function M.get(palette, options)
 		-- Windows and splits
 		{ 'WinSeparator', { fg = palette.border } },
 		{ 'VertSplit', { link = 'WinSeparator' } },
-		{
-			'StatusLine',
-			{ fg = palette.foreground, bg = palette.background_panel },
-		},
+		-- Mark the active window with a rose bar and dark text
+		{ 'StatusLine', { fg = palette.background, bg = palette.rose } },
 		{
 			'StatusLineNC',
 			{ fg = palette.foreground_muted, bg = palette.background_panel },
