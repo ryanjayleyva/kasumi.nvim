@@ -8,6 +8,7 @@ local plugin_modules = {
 	'treesitter-context',
 	'dap',
 	'neotest',
+	'mason',
 }
 
 function M.get(palette, options)
