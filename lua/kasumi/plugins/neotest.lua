@@ -1,4 +1,4 @@
--- Define neotest groups
+-- neotest highlight groups
 local M = {}
 
 function M.get(palette)

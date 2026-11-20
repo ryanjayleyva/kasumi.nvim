@@ -1,7 +1,7 @@
--- Define nvim-cmp groups
+-- nvim-cmp highlight groups
 local M = {}
 
--- Reuse the syntax colors so a kind looks the same in the menu and in code
+-- Kinds use the syntax colors, so they look the same in the menu and in code
 local function get_kind_colors(palette)
 	return {
 		{ 'Text', palette.foreground_muted },

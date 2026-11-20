@@ -1,8 +1,8 @@
 # eza colors for kasumi.nvim
 # Source this file from ~/.zshrc, then run: source ~/.zshrc
-# Keep the values in sync with lua/kasumi/palette.lua
+# Values mirror lua/kasumi/palette.lua
 
-# Convert a hex color to the truecolor escape that eza reads
+# Hex color to the truecolor escape that eza reads
 _kasumi_sgr() {
 	local hex=${1#\#}
 	print -n "38;2;$((16#${hex[1,2]}));$((16#${hex[3,4]}));$((16#${hex[5,6]}))"

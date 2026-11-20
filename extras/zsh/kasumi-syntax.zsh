@@ -1,8 +1,8 @@
 # kasumi.nvim colors for zsh-syntax-highlighting and zsh-autosuggestions
 # Source this file after the plugins in ~/.zshrc, then run: source ~/.zshrc
-# Keep the values in sync with lua/kasumi/palette.lua
+# Values mirror lua/kasumi/palette.lua
 
-# Use exact hex colors, and fall back to the nearest color without truecolor
+# Exact hex colors, with the nearest color as a fallback without truecolor
 [[ $COLORTERM == (truecolor|24bit) ]] || zmodload zsh/nearcolor 2>/dev/null
 
 typeset -A _kasumi=(

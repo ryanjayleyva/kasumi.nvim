@@ -1,4 +1,4 @@
--- Define vim-dadbod-ui groups
+-- vim-dadbod-ui highlight groups
 local M = {}
 
 function M.get(palette)
@@ -8,7 +8,7 @@ function M.get(palette)
 	}
 
 	-- The plugin sets these two with fixed colors each time its buffer opens,
-	-- after the colorscheme has loaded, so apply them again once it is done
+	-- after the colorscheme has loaded, so they are applied again afterward
 	local group = vim.api.nvim_create_augroup('KasumiDadbod', { clear = true })
 	vim.api.nvim_create_autocmd('FileType', {
 		group = group,

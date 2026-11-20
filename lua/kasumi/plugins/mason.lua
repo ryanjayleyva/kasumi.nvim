@@ -1,9 +1,9 @@
--- Define mason.nvim groups
+-- mason.nvim highlight groups
 local M = {}
 
 function M.get(palette)
 	return {
-		-- Dim the editor behind the window
+		-- Backdrop behind the window
 		{ 'MasonBackdrop', { bg = palette.background_panel } },
 
 		-- Window headers

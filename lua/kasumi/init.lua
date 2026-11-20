@@ -4,7 +4,7 @@ local highlight_modules = { 'highlights', 'syntax', 'plugins' }
 
 M.options = { transparent = false }
 
--- Clear stale groups so nothing leaks in from the previous colorscheme
+-- Groups from the previous colorscheme stay unless they are cleared
 local function reset_highlights()
 	vim.cmd('highlight clear')
 	if vim.fn.exists('syntax_on') == 1 then
@@ -36,7 +36,7 @@ end
 
 function M.setup(user_options)
 	M.options = vim.tbl_deep_extend('force', M.options, user_options or {})
-	-- Reload so new options apply without another :colorscheme
+	-- Options apply on load, so reload when the colorscheme is already active
 	if vim.g.colors_name == 'kasumi' then
 		M.load()
 	end
