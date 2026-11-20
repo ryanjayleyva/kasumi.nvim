@@ -1,7 +1,7 @@
 -- Define kulala.nvim groups
 local M = {}
 
-function M.get(palette, _options)
+function M.get(palette)
 	-- Replace the fixed Swagger colors on HTTP methods in the OpenAPI panel
 	return {
 		{ 'KulalaOpenAPIMethodGet', { fg = palette.aqua, bold = true } },

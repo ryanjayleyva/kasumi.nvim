@@ -1,7 +1,7 @@
 -- Define nvim-treesitter-context groups
 local M = {}
 
-function M.get(palette, _options)
+function M.get(palette)
 	return {
 		-- Stay opaque, even when transparent, so scrolling code does not show through
 		{

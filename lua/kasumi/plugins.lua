@@ -1,4 +1,5 @@
 -- Collect plugin groups from lua/kasumi/plugins/
+-- Each module gets (palette, options) and can declare only what it uses
 local M = {}
 
 local plugin_modules = {

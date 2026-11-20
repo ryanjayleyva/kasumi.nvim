@@ -1,7 +1,7 @@
 -- Define telescope.nvim groups
 local M = {}
 
-function M.get(palette, _options)
+function M.get(palette)
 	return {
 		-- Paint the picker like a float so it stands out from the editor
 		{ 'TelescopeNormal', { link = 'NormalFloat' } },

@@ -1,7 +1,7 @@
 -- Define gitsigns.nvim groups
 local M = {}
 
-function M.get(palette, _options)
+function M.get(palette)
 	return {
 		-- Number column, line and staged variants derive from these three
 		{ 'GitSignsAdd', { fg = palette.jade } },

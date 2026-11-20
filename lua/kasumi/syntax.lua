@@ -2,7 +2,7 @@
 -- Return a list of { group_name, definition } pairs, like the other modules
 local M = {}
 
-function M.get(palette, _options)
+function M.get(palette)
 	return {
 		-- Classic Vim syntax groups. Treesitter captures link to these by
 		-- default, so most code gets its color from this section

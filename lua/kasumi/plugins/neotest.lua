@@ -1,7 +1,7 @@
 -- Define neotest groups
 local M = {}
 
-function M.get(palette, _options)
+function M.get(palette)
 	return {
 		-- Test status
 		{ 'NeotestPassed', { fg = palette.jade } },

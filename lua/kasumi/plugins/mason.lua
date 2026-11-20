@@ -1,7 +1,7 @@
 -- Define mason.nvim groups
 local M = {}
 
-function M.get(palette, _options)
+function M.get(palette)
 	return {
 		-- Dim the editor behind the window
 		{ 'MasonBackdrop', { bg = palette.background_panel } },

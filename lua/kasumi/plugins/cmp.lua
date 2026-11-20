@@ -32,7 +32,7 @@ local function get_kind_colors(palette)
 	}
 end
 
-function M.get(palette, _options)
+function M.get(palette)
 	local groups = {
 		-- The defaults inherit Pmenu, which leaves matched characters unmarked
 		{ 'CmpItemAbbrMatch', { fg = palette.aqua, bold = true } },

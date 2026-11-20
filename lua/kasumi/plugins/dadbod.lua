@@ -1,7 +1,7 @@
 -- Define vim-dadbod-ui groups
 local M = {}
 
-function M.get(palette, _options)
+function M.get(palette)
 	local status_groups = {
 		{ 'dbui_connection_ok', { fg = palette.jade } },
 		{ 'dbui_connection_error', { fg = palette.rose } },

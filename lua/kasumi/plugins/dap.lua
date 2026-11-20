@@ -1,7 +1,7 @@
 -- Define nvim-dap and nvim-dap-ui groups
 local M = {}
 
-function M.get(palette, _options)
+function M.get(palette)
 	return {
 		-- nvim-dap draws the stopped line with debugPC, which is empty by default
 		{ 'debugPC', { bg = palette.background_selection } },
