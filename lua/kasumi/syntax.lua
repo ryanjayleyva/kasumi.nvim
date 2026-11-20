@@ -1,11 +1,10 @@
--- Define syntax and Treesitter groups
--- Return a list of { group_name, definition } pairs, like the other modules
+-- Syntax and Treesitter highlight groups
 local M = {}
 
 function M.get(palette)
 	return {
-		-- Classic Vim syntax groups. Treesitter captures link to these by
-		-- default, so most code gets its color from this section
+		-- Vim syntax groups. Most Treesitter captures link to these, so they
+		-- set the color for most code
 		{ 'Comment', { fg = palette.foreground_muted, italic = true } },
 		{ 'SpecialComment', { fg = palette.lavender, italic = true } },
 		{ 'Todo', { fg = palette.background, bg = palette.peach, bold = true } },
@@ -53,8 +52,7 @@ function M.get(palette)
 		{ 'Changed', { fg = palette.aqua } },
 		{ 'Removed', { fg = palette.rose } },
 
-		-- Treesitter captures that need a different color than their default
-		-- Vim group
+		-- Treesitter captures that differ from their Vim group
 		{ '@variable', { fg = palette.foreground } },
 		{ '@variable.parameter', { fg = palette.lavender } },
 		{ '@variable.builtin', { fg = palette.rose } },
@@ -106,6 +104,10 @@ function M.get(palette)
 		{ '@diff.plus', { link = 'Added' } },
 		{ '@diff.minus', { link = 'Removed' } },
 		{ '@diff.delta', { link = 'Changed' } },
+
+		-- LSP semantic tokens draw above Treesitter. Without this link, builtins
+		-- such as this and self would take the plain variable color
+		{ '@lsp.typemod.variable.defaultLibrary', { link = '@variable.builtin' } },
 	}
 end
 
