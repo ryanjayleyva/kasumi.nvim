@@ -1,4 +1,4 @@
--- Define nvim-dap and nvim-dap-ui groups
+-- nvim-dap and nvim-dap-ui highlight groups
 local M = {}
 
 function M.get(palette)
@@ -15,9 +15,9 @@ function M.get(palette)
 		{ 'DapLogPoint', { fg = palette.aqua } },
 		{ 'DapStopped', { fg = palette.jade } },
 
-		-- Match the other floating windows
+		-- Same as the other floating windows
 		{ 'DapUIFloatBorder', { link = 'FloatBorder' } },
-		-- Mark the stop button as destructive
+		-- The stop button is rose, as a destructive action
 		{ 'DapUIStop', { fg = palette.rose } },
 	}
 end

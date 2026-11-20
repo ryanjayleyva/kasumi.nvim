@@ -1,14 +1,14 @@
--- Define telescope.nvim groups
+-- telescope.nvim highlight groups
 local M = {}
 
 function M.get(palette)
 	return {
-		-- Paint the picker like a float so it stands out from the editor
+		-- The picker uses the float colors so it stands out from the editor
 		{ 'TelescopeNormal', { link = 'NormalFloat' } },
 		{ 'TelescopeBorder', { link = 'FloatBorder' } },
 		{ 'TelescopeTitle', { link = 'FloatTitle' } },
 
-		-- Match nvim-cmp so matched characters look the same in both
+		-- Same as nvim-cmp, so matched characters look the same in both
 		{ 'TelescopeMatching', { fg = palette.aqua, bold = true } },
 
 		{ 'TelescopePromptPrefix', { fg = palette.rose } },

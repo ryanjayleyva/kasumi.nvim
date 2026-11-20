@@ -1,8 +1,8 @@
 -- WezTerm colors for kasumi.nvim
 -- Copy this file next to wezterm.lua, then add to your config:
 --   config.colors = require('kasumi')
--- Keep the values in sync with lua/kasumi/palette.lua. WezTerm loads this
--- file on its own, without Neovim, so it cannot read the palette.
+-- Values mirror lua/kasumi/palette.lua. WezTerm loads this file on its own,
+-- without Neovim, so it cannot read the palette.
 local M = {}
 
 M.foreground = '#d3cdca'
@@ -36,7 +36,7 @@ M.brights = {
 	'#d3cdca',
 }
 
--- Match the Neovim statusline, with a rose bar for the active tab
+-- The tab bar follows the Neovim statusline, with a rose bar for the active tab
 M.tab_bar = {
 	background = '#121212',
 	active_tab = { bg_color = '#dbaeaf', fg_color = '#181818' },

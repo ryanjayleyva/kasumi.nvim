@@ -1,4 +1,4 @@
--- Define gitsigns.nvim groups
+-- gitsigns.nvim highlight groups
 local M = {}
 
 function M.get(palette)
@@ -12,7 +12,7 @@ function M.get(palette)
 			'GitSignsCurrentLineBlame',
 			{ fg = palette.foreground_muted, italic = true },
 		},
-		-- Mark changed words instead of inverting the cursor colors
+		-- Changed words get a colored block instead of inverted cursor colors
 		{ 'GitSignsAddInline', { fg = palette.background, bg = palette.jade } },
 		{ 'GitSignsChangeInline', { fg = palette.background, bg = palette.aqua } },
 		{ 'GitSignsDeleteInline', { fg = palette.background, bg = palette.rose } },

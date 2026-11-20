@@ -18,15 +18,15 @@ local lavender = '#cac1c7'
 local sage_light = '#b5c4b8'
 local silver = '#d3cdca'
 
--- Set the editor background
+-- Editor background
 local ink = '#181818'
 
--- Derive from the background
+-- Backgrounds derived from the editor background
 local ink_darker = '#121212'
 local ink_popup = '#1d1d1d'
 local ink_selection = '#2c2c2c'
 
--- Derive from the foreground, a quarter of the way from grey to silver
+-- Derived from the foreground, a quarter of the way from grey to silver
 local ash = '#969995'
 
 M.background = ink

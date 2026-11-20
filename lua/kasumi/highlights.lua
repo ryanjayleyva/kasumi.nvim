@@ -1,9 +1,8 @@
--- Define editor UI groups (Normal, StatusLine, Pmenu, ...)
--- Return a list of { group_name, definition } pairs, like the other modules
+-- Editor UI highlight groups (Normal, StatusLine, Pmenu, ...)
 local M = {}
 
 function M.get(palette, options)
-	-- Let the terminal background show through when transparent
+	-- Transparent mode uses the terminal background
 	local background = options.transparent and 'NONE' or palette.background
 
 	return {
@@ -19,7 +18,7 @@ function M.get(palette, options)
 			'FloatTitle',
 			{ fg = palette.rose, bg = palette.background_popup, bold = true },
 		},
-		-- Keep the blend values, which set how much of the editor shows through
+		-- Blend values set how much of the editor shows through
 		{ 'FloatShadow', { bg = palette.background_panel, blend = 80 } },
 		{ 'FloatShadowThrough', { bg = palette.background_panel, blend = 100 } },
 		{ 'MsgArea', { fg = palette.foreground } },
@@ -30,7 +29,7 @@ function M.get(palette, options)
 		{ 'lCursor', { link = 'Cursor' } },
 		{ 'CursorIM', { link = 'Cursor' } },
 		{ 'TermCursor', { link = 'Cursor' } },
-		-- Draw no cursor line or column, since Neovim's defaults would show one
+		-- No cursor line or column, since Neovim's defaults would draw one
 		{ 'CursorLine', { bg = 'NONE' } },
 		{ 'CursorColumn', { bg = 'NONE' } },
 		{ 'ColorColumn', { bg = palette.background_subtle } },
@@ -72,7 +71,7 @@ function M.get(palette, options)
 		-- Windows and splits
 		{ 'WinSeparator', { fg = palette.border } },
 		{ 'VertSplit', { link = 'WinSeparator' } },
-		-- Mark the active window with a rose bar and dark text
+		-- A rose bar with dark text marks the active window
 		{ 'StatusLine', { fg = palette.background, bg = palette.rose } },
 		{
 			'StatusLineNC',
@@ -130,12 +129,12 @@ function M.get(palette, options)
 		{ 'DiagnosticUnderlineHint', { undercurl = true, sp = palette.jade } },
 		{ 'DiagnosticUnderlineOk', { undercurl = true, sp = palette.sage } },
 
-		-- LSP text that the editor adds. These default to NonText, which is
+		-- Text the editor adds for LSP. These default to NonText, which is
 		-- too dark to read
 		{ 'LspInlayHint', { fg = palette.foreground_soft } },
 		{ 'LspCodeLens', { link = 'LspInlayHint' } },
 		{ 'LspCodeLensSeparator', { link = 'LspInlayHint' } },
-		-- Keep ghost text dim so it does not look like typed code
+		-- Ghost text stays dim so it does not look like typed code
 		{ 'ComplHint', { fg = palette.foreground_muted } },
 
 		-- Spelling
