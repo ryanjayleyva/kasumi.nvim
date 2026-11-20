@@ -10,12 +10,12 @@ _kasumi_sgr() {
 
 # Colors not listed here keep eza's defaults, which follow the terminal palette
 export EZA_COLORS="\
-uu=$(_kasumi_sgr '#dbaeaf'):\
-un=$(_kasumi_sgr '#dbaeaf'):\
-gu=$(_kasumi_sgr '#ccb6bf'):\
-gn=$(_kasumi_sgr '#ccb6bf'):\
-da=$(_kasumi_sgr '#b3c2c9'):\
-di=$(_kasumi_sgr '#d3cdca'):\
-fi=$(_kasumi_sgr '#cac1c7')"
+uu=$(_kasumi_sgr '#9cbeba'):\
+un=$(_kasumi_sgr '#9cbeba'):\
+gu=$(_kasumi_sgr '#9cbeba'):\
+gn=$(_kasumi_sgr '#9cbeba'):\
+da=$(_kasumi_sgr '#dcb2ac'):\
+di=$(_kasumi_sgr '#dbaeaf'):\
+fi=$(_kasumi_sgr '#d3cdca')"
 
 unset -f _kasumi_sgr
