@@ -1,0 +1,27 @@
+# Ghostty colors for kasumi.nvim
+# Copy this file to ~/.config/ghostty/themes/kasumi, then add to your config:
+#   theme = kasumi
+# Values mirror lua/kasumi/palette.lua
+
+palette = 0=#040406
+palette = 1=#dbaeaf
+palette = 2=#babca7
+palette = 3=#dcb2ac
+palette = 4=#9cbeba
+palette = 5=#ccb6bf
+palette = 6=#75a894
+palette = 7=#818783
+palette = 8=#1e1d24
+palette = 9=#d7bebd
+palette = 10=#dbd4c9
+palette = 11=#dbbfaf
+palette = 12=#b3c2c9
+palette = 13=#cac1c7
+palette = 14=#b5c4b8
+palette = 15=#d3cdca
+
+background = #181818
+foreground = #d3cdca
+cursor-color = #d7bebd
+selection-background = #2c2c2c
+selection-foreground = #d3cdca
