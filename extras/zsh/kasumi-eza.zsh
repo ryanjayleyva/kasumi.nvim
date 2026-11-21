@@ -9,6 +9,26 @@ _kasumi_sgr() {
 }
 
 # Colors not listed here keep eza's defaults, which follow the terminal palette
+
+# ur = User-readable file
+# uw = User-writable file
+# ux = User-executable file
+# ue = User-executable file (other executable type)
+# gr = Group-readable file
+# gw = Group-writable file
+# gx = Group-executable file
+# tr = Other-readable file
+# tw = Other-writable file
+# tx = Other-executable file
+# uu = Setuid file
+# un = Setuid file (no permission)
+# gu = Setgid file
+# gn = Setgid file (no permission)
+# da = File with extended attributes
+# di = Directory
+# fi = Regular file
+# bu = Block device
+
 export EZA_COLORS="\
 ur=$(_kasumi_sgr '#dbbfaf'):\
 uw=$(_kasumi_sgr '#d7bebd'):\
@@ -20,13 +40,13 @@ gx=$(_kasumi_sgr '#babca7'):\
 tr=$(_kasumi_sgr '#dcb2ac'):\
 tw=$(_kasumi_sgr '#dbaeaf'):\
 tx=$(_kasumi_sgr '#babca7'):\
-uu=$(_kasumi_sgr '#b3c2c9'):\
-un=$(_kasumi_sgr '#b3c2c9'):\
-gu=$(_kasumi_sgr '#cac1c7'):\
-gn=$(_kasumi_sgr '#cac1c7'):\
-da=$(_kasumi_sgr '#d3cdca'):\
-di=$(_kasumi_sgr '#d7bebd'):\
-fi=$(_kasumi_sgr '#d3cdca'):\
-bu=$(_kasumi_sgr '#d3cdca')"
+uu=$(_kasumi_sgr '#d7bebd'):\
+un=$(_kasumi_sgr '#d7bebd'):\
+gu=$(_kasumi_sgr '#d7bebd'):\
+gn=$(_kasumi_sgr '#d7bebd'):\
+da=$(_kasumi_sgr '#cac1c7'):\
+di=$(_kasumi_sgr '#cac1c7'):\
+fi=$(_kasumi_sgr '#dbd4c9'):\
+bu=$(_kasumi_sgr '#dbd4c9')"
 
 unset -f _kasumi_sgr
