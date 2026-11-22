@@ -1,8 +1,7 @@
 -- WezTerm colors for kasumi.nvim
 -- Copy this file next to wezterm.lua, then add to your config:
 --   config.colors = require('kasumi')
--- Values mirror lua/kasumi/palette.lua. WezTerm loads this file on its own,
--- without Neovim, so it cannot read the palette.
+-- Or use extras/wezterm/kasumi.toml as a color scheme instead.
 local M = {}
 
 M.foreground = '#d3cdca'
