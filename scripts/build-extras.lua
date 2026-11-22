@@ -32,6 +32,20 @@ end
 local check_only = vim.tbl_contains(arg, '--check')
 local out_of_date = {}
 
+-- Directories whose .svg files are all generated, so any the targets no longer
+-- produce are stale, such as a swatch for a color that left the palette
+local generated_dirs = { 'assets/swatches' }
+local stale_files = {}
+for _, dir in ipairs(generated_dirs) do
+	for name, kind in vim.fs.dir(shared.repo_root .. '/' .. dir) do
+		local path = dir .. '/' .. name
+		if kind == 'file' and name:match('%.svg$') and not generated_files[path] then
+			table.insert(stale_files, path)
+		end
+	end
+end
+table.sort(stale_files)
+
 for path, content in vim.spairs(generated_files) do
 	local full_path = shared.repo_root .. '/' .. path
 	if shared.read_file(full_path) ~= content then
@@ -41,6 +55,15 @@ for path, content in vim.spairs(generated_files) do
 			shared.write_file(full_path, content)
 			print('wrote ' .. path)
 		end
+	end
+end
+
+for _, path in ipairs(stale_files) do
+	if check_only then
+		table.insert(out_of_date, path .. ' (stale)')
+	else
+		os.remove(shared.repo_root .. '/' .. path)
+		print('removed ' .. path)
 	end
 end
 
