@@ -1,6 +1,6 @@
 # tmux colors for kasumi.nvim
-# Copy this file to ~/.config/tmux/kasumi.conf, then add to your tmux.conf:
-#   source-file ~/.config/tmux/kasumi.conf
+# Copy this file to ~/.config/tmux/kasumi.tmux, then add to your tmux.conf:
+#   source-file ~/.config/tmux/kasumi.tmux
 # Values mirror lua/kasumi/palette.lua
 
 set -g mode-style "fg=#d3cdca,bg=#2c2c2c"
