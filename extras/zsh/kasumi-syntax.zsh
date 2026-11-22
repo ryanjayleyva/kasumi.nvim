@@ -6,7 +6,7 @@
 [[ $COLORTERM == (truecolor|24bit) ]] || zmodload zsh/nearcolor 2>/dev/null
 
 typeset -A _kasumi=(
-	foreground '#d3cdca'
+	foreground '#dbd4c9'
 	muted      '#818783'
 	rose       '#dbaeaf'
 	sage       '#babca7'
