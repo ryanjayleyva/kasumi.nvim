@@ -29,6 +29,36 @@ local ink_selection = '#2c2c2c'
 -- Derived from the foreground, a quarter of the way from grey to silver
 local ash = '#969995'
 
+-- Maps each hex above back to its variable name, for docs and generators
+local named = {
+	black = black,
+	rose = rose,
+	sage = sage,
+	blush = blush,
+	aqua = aqua,
+	mauve = mauve,
+	jade = jade,
+	grey = grey,
+	charcoal = charcoal,
+	rose_light = rose_light,
+	cream = cream,
+	peach = peach,
+	mist = mist,
+	lavender = lavender,
+	sage_light = sage_light,
+	silver = silver,
+	ink = ink,
+	ink_darker = ink_darker,
+	ink_popup = ink_popup,
+	ink_selection = ink_selection,
+	ash = ash,
+}
+
+M.color_names = {}
+for name, hex in pairs(named) do
+	M.color_names[hex] = name
+end
+
 M.background = ink
 M.background_panel = ink_darker -- statusline and sidebars
 M.background_popup = ink_popup -- floating windows and menus
