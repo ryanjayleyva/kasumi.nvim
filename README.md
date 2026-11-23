@@ -136,6 +136,9 @@ a comment that says where to copy it and what to add to your config.
 | [eza](https://github.com/eza-community/eza) in zsh | `extras/zsh/kasumi-eza.zsh`                                 |
 | zsh-syntax-highlighting and zsh-autosuggestions    | `extras/zsh/kasumi-syntax.zsh`                              |
 
+[Rex](https://www.superlogical.com/updates/public-testing-beginning) can import
+the Ghostty file, so import `extras/ghostty/kasumi` there to use kasumi.
+
 ## Contributing
 
 The extras and the palette tables above are generated from
