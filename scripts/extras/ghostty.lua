@@ -8,6 +8,8 @@ local function build_theme()
 		'# ' .. shared.generated_note,
 		'# Copy this file to ~/.config/ghostty/themes/kasumi, then add to your config:',
 		'#   theme = kasumi',
+		'# Using Rex (https://www.superlogical.com/updates/public-testing-beginning)?',
+		'# Import this file in Rex to use kasumi.',
 		'',
 	}
 
