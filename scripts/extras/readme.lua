@@ -110,11 +110,25 @@ end
 
 -- Building the tables fills `files` with the swatches, so it runs first
 local palette_tables = build_palette_tables()
-files['README.md'] = replace_between_markers(
+local readme = replace_between_markers(
 	shared.read_file(shared.repo_root .. '/README.md'),
 	'<!-- palette:start -->',
 	'<!-- palette:end -->',
 	palette_tables
+)
+
+-- The lines to paste into my_git_formatter for the powerlevel10k git segment
+local p10k_git_formatter = table.concat({
+	'```zsh',
+	shared.p10k_git_formatter_lines[1],
+	shared.p10k_git_formatter_lines[2],
+	'```',
+}, '\n')
+files['README.md'] = replace_between_markers(
+	readme,
+	'<!-- p10k:start -->',
+	'<!-- p10k:end -->',
+	p10k_git_formatter
 )
 
 return files
