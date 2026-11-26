@@ -24,6 +24,20 @@ M.theme = {
 	split = palette.border,
 }
 
+-- The two lines to put in my_git_formatter in ~/.p10k.zsh. The default config
+-- hardcodes the git segment colors there, so the p10k extra and the README both
+-- show these lines instead of setting them
+M.p10k_git_formatter_lines = {
+	("local clean='%%F{%s}' modified='%%F{%s}'"):format(
+		palette.sage,
+		palette.aqua
+	),
+	("local untracked='%%F{%s}' conflicted='%%F{%s}'"):format(
+		palette.lavender,
+		palette.rose
+	),
+}
+
 function M.join_lines(lines)
 	return table.concat(lines, '\n') .. '\n'
 end
