@@ -11,7 +11,8 @@ sages and greys on a near-black background.
 - Plugin highlights for gitsigns, nvim-cmp, telescope,
   nvim-treesitter-context, nvim-dap, neotest, mason, kulala and vim-dadbod-ui
 - The 16 terminal colors set inside Neovim, so `:terminal` matches the theme
-- Matching themes for Ghostty, WezTerm, tmux and zsh, in [extras](#extras)
+- Matching themes for Ghostty, WezTerm, tmux, eza, powerlevel10k and zsh syntax
+  highlighting, in [extras](#extras)
 
 ## Installation
 
@@ -86,8 +87,6 @@ backgrounds and the soft foreground are new.
 These also set the `:terminal` colors inside Neovim. The tables below are
 generated from `lua/kasumi/palette.lua` by `scripts/build-extras.lua`.
 
-<!-- palette:start -->
-
 | Index | Name       | Color                                     |
 | ----- | ---------- | ----------------------------------------- |
 | 0     | black      | ![black](assets/swatches/040406.svg)      |
@@ -121,20 +120,32 @@ generated from `lua/kasumi/palette.lua` by `scripts/build-extras.lua`.
 | foreground_muted | ![foreground_muted](assets/swatches/818783.svg) | grey          |
 | border           | ![border](assets/swatches/1e1d24.svg)           | charcoal      |
 
-<!-- palette:end -->
-
 ## Extras
 
 The `extras` folder has the same colors for other tools. Each file starts with
 a comment that says where to copy it and what to add to your config.
 
-| Tool                                               | File                                                        |
-| -------------------------------------------------- | ----------------------------------------------------------- |
-| [Ghostty](https://ghostty.org)                     | `extras/ghostty/kasumi`                                     |
-| [WezTerm](https://wezterm.org)                     | `extras/wezterm/kasumi.toml` or `extras/wezterm/kasumi.lua` |
-| [tmux](https://github.com/tmux/tmux)               | `extras/tmux/kasumi.tmux`                                   |
-| [eza](https://github.com/eza-community/eza) in zsh | `extras/zsh/kasumi-eza.zsh`                                 |
-| zsh-syntax-highlighting and zsh-autosuggestions    | `extras/zsh/kasumi-syntax.zsh`                              |
+| Tool                                                      | File                                                        |
+| --------------------------------------------------------- | ----------------------------------------------------------- |
+| [Ghostty](https://ghostty.org)                            | `extras/ghostty/kasumi`                                     |
+| [WezTerm](https://wezterm.org)                            | `extras/wezterm/kasumi.toml` or `extras/wezterm/kasumi.lua` |
+| [tmux](https://github.com/tmux/tmux)                      | `extras/tmux/kasumi.tmux`                                   |
+| [eza](https://github.com/eza-community/eza) in zsh        | `extras/zsh/kasumi-eza.zsh`                                 |
+| [powerlevel10k](https://github.com/romkatv/powerlevel10k) | `extras/zsh/kasumi-p10k.zsh`                                |
+| zsh-syntax-highlighting and zsh-autosuggestions           | `extras/zsh/kasumi-syntax.zsh`                              |
+
+The powerlevel10k file sets the prompt colors, but not the git segment. The
+default `~/.p10k.zsh` hardcodes those colors in `my_git_formatter`, so edit that
+function by hand. In `~/.p10k.zsh`, replace the colors in the first block of
+`my_git_formatter`, the one commented `green foreground`, with these. The
+`.gitconfig` color settings don't affect the prompt.
+
+```zsh
+local clean='%F{#babca7}' modified='%F{#9cbeba}'
+local untracked='%F{#cac1c7}' conflicted='%F{#dbaeaf}'
+```
+
+The same lines are in the comment at the top of `extras/zsh/kasumi-p10k.zsh`.
 
 [Rex](https://www.superlogical.com/updates/public-testing-beginning) can import
 the Ghostty file, so import `extras/ghostty/kasumi` there to use kasumi.
