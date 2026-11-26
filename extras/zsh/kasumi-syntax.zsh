@@ -6,7 +6,7 @@
 [[ $COLORTERM == (truecolor|24bit) ]] || zmodload zsh/nearcolor 2>/dev/null
 
 typeset -A _kasumi=(
-	foreground '#dbd4c9'
+	foreground '#d3cdca'
 	muted      '#818783'
 	rose       '#dbaeaf'
 	sage       '#babca7'
@@ -24,7 +24,7 @@ ZSH_HIGHLIGHT_STYLES+=(
 	default                        "fg=${_kasumi[foreground]}"
 	unknown-token                  "fg=${_kasumi[rose]}"
 	bracket-error                  "fg=${_kasumi[rose]}"
-	comment                        "fg=${_kasumi[muted]}"
+	comment                        "fg=${_kasumi[muted]},italic"
 
 	reserved-word                  "fg=${_kasumi[mauve]}"
 	command                        "fg=${_kasumi[aqua]}"
